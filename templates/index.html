@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Make a post</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" /> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Montserrat:wght@200;300&
+        family=Roboto:wght@300family=Merriweather:wght@300&family=Orelega+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="bucketlist-form">
+                <p class="page-description">Crea una lista de lugares o cosas por hacer</p>
+                <hr>
+                <form action="/submit" method="POST" enctype="multipart/form-data" id="form">
+                    
+                    <h3>Título</h3>
+                    <input type="text" name="title" id="title" />
+                    <h3>Descripcion</h3>
+                    <textarea name="description" placeholder="Realiza una descripcion de la actvidad que quieres realizar" id="description"></textarea>
+                    <h3>Ingresa una imágen</h3>
+                    <input type="file" name="image" placeholder="imagen o video" id="image"/>
+                    <h3>Coloca la ubicacion</h3>
+                    <input type="text" name="location" placeholder="Ubicacion" id="location"/>
+                    <input type="submit" name="Submit" class="btn" />
+                    
+                    {% block message %} {% endblock %}
+
+                </form>
+            </div>
+            
+            <div class="todo" style="background-color:azure; display: flex; flex-flow: row wrap;justify-content: space-around;
+            border-radius: 5px; padding: 20px; margin-top: 15px;">
+                <h2 style="width: 100%; font-family: 'Raleway', sans-serif;
+                font-weight: 500; font-size: 30px; text-align: center;"> MI LISTA</h2>
+
+                {% block contenido %} 
+                {% endblock %}
+
+            </div>
+        </div>
+        <script src="../static/main.js"></script>
+    </body>
+</html>

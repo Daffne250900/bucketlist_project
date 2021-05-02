@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block message%}
+    {% if message %}
+        <p class="message" style="color: orangered; font-family: 'Raleway', sans-serif; text-align: center;">{{ message | safe }}</p>
+    {% endif %}
+{% endblock%}
+
+{% block contenido %}
+    {% for element in data %} 
+        <div class="contenedor" style="border-radius: 5px; box-shadow: 0px 0px 2px rgba(0,0,0,0.5); 
+        background-color: white; padding: 10px; width: 40%;
+        margin-bottom: 20px;">
+
+        <div style="background-color: rgba(0, 0,0, 0.1); text-align: center; padding: 0.5em;">
+            <img src= "../static/images/{{ element.image }}" height="150px"/>
+        </div>
+
+        <p style="font-family: 'Raleway', sans-serif; text-align: center; font-weight: 700;">
+        {{ element.title }} </p>
+
+        <p style="font-family: 'Raleway', sans-serif; font-size: 15px; text-align: center;">
+            {{ element.description }} </br>
+            {{ element.location }}</p>
+
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,94 @@
+body{
+    background-image: radial-gradient(circle at -18.3% 31.7%, #cff279 0, #bbf37f 12.5%, #9fee7f 25%, #7ae47c 37.5%, #42d475 50%, #00c471 62.5%, #00b974 75%, #00b27e 87.5%, #00b08d 100%);}
+
+.container {
+    padding-left: 30%;
+    padding-right: 25%;
+    padding-top: 2%;
+}
+
+.bucketlist-form {
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-content: stretch;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.5);
+}
+
+.page-description {
+    display: flex;
+    margin: 0px;
+    padding-left: 11px;
+    padding-right: 11px;
+    align-items: center;
+    text-align: center;  
+    font-family: 'Merriwheather', serif;
+    font-size: 40px; 
+    font-weight: 500; 
+    color: white;
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+    background-image: url('../static/img/background2.jpg');
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+form {
+    padding: 10px;
+}
+
+
+form h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    margin-bottom: 5px;
+}
+
+
+.bucketlist-form input[type=text] {
+    width: 80%;
+    padding: 6px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: solid 1px black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: aqua;
+}
+
+.bucketlist-form textarea {
+    width: 80%;
+    margin-left: 10px;
+    height: 80px;
+    padding: 6px 10px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.bucketlist-form input[type=file] {
+    margin-left: 10px;
+}
+
+.btn {
+    width: 60%;
+    background-color: #4caf50; 
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 55px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+
+
+
+
